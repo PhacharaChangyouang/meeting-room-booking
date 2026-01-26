@@ -1,73 +1,61 @@
-spin3ต่อสัปดาห์หน้า
-spin3ที่จะทำต่อไปค่อ
-🔹 Spin 3: Scope / Focus
+# Meeting Room Booking System
 
-หลังจาก Spin 2 (MVP) จบแล้ว ระบบมี:
+## Project Overview
+ระบบจองห้องประชุมอัจฉริยะ สำหรับพนักงานและทีมงานในองค์กร
+- ค้นหาห้องประชุมได้รวดเร็ว
+- จองผ่านมือถือหรือเว็บ
+- ตรวจสอบอุปกรณ์และความพร้อมของห้อง
+- การแจ้งเตือนอัจฉริยะ
+- ผสานกับปฏิทินการทำงาน (Google / Outlook)
+- รองรับการใช้งานหลายคนและทีม
 
-Frontend + Backend สำหรับ:
+---
 
-Quick Room Search
+## Spin 2 – MVP Features
 
-Mobile-first Booking
+| User Story | Description | Status |
+|------------|-------------|--------|
+| US-01 Quick Room Search | ค้นหาห้องว่างและจองได้ทันที | ✅ Completed |
+| US-02 Mobile-First Booking | จองห้องผ่านมือถือไม่เกิน 3 taps | ✅ Completed |
+| US-03 Smart Notifications (Mock) | แจ้งเตือนก่อนประชุม / no-show | ✅ Completed |
+| US-04 Equipment Visibility | ดูรายการอุปกรณ์และสถานะ | ✅ Completed |
+| US-05 Calendar Integration | Sync การจองกับ Google/Outlook | ✅ Completed |
 
-Smart Notifications (mock)
+---
 
-Equipment Visibility
+## Spin 3 – New Features & Improvements
 
-Calendar Integration
+| Feature | Description | Status |
+|---------|-------------|--------|
+| Recurring Meetings | จองประชุมซ้ำรายสัปดาห์/รายเดือน | ⬜ Planned |
+| Team Calendar View | ดูตารางห้องรวมทีม | ⬜ Planned |
+| Advanced Filtering | Filter ตาม capacity, equipment, location | ⬜ Planned |
+| Delegation & Permissions | มอบสิทธิ์การจองให้คนอื่น / admin | ⬜ Planned |
+| Usage Analytics | ดูสถิติการใช้งานห้อง, no-show rate | ⬜ Planned |
+| Smart Notifications – Real | ส่ง push / desktop / email จริง | ⬜ Planned |
+| UI/UX Enhancement | ปรับหน้าเว็บให้สวย, mobile-friendly | ⬜ Planned |
+| Testing & Deployment | Unit, Integration, E2E + Deploy server/cloud | ⬜ Planned |
 
-Database: SQLite3
+---
 
-Basic UI: จองห้องและดู My Bookings
+## Goals
+- ระบบสมบูรณ์แบบสำหรับใช้งานจริง
+- รองรับผู้ใช้หลายคน / ทีม
+- ลดปัญหา No-show / Booking conflict
+- ครบทั้ง MVP + Advanced Features
 
-🔹 สิ่งที่ Spin 3 จะทำ
+---
 
-Spin 3 จะเป็น การขยายระบบ และ ปรับปรุงให้สมบูรณ์:
+## Usage
+1. เปิดหน้า frontend (`index.html`) หรือรันผ่าน server  
+2. เลือกห้อง, เวลา, ใส่หัวข้อประชุม  
+3. กด **Book** → ระบบจะแจ้งเตือนและบันทึกลงฐานข้อมูล  
+4. ตรวจสอบการจองของคุณที่หน้า **My Bookings**
 
-Feature / Task	Description	Priority
-Recurring Meetings (US-06)	จองประชุมซ้ำ (รายสัปดาห์ / รายเดือน)	High
-Team Calendar View (US-07)	ดูตารางห้องรวมทั้งทีม	Medium
-Advanced Filtering (US-08)	Filter ตาม capacity, equipment, location	Medium
-Delegation & Permissions (US-09)	มอบสิทธิ์การจองให้คนอื่น / admin	Medium
-Usage Analytics (US-10)	ดูสถิติการใช้งานห้อง, no-show rate, utilization	Medium
-Smart Notifications – Real	แก้จาก mock → push/desktop/Email notifications จริง	High
-UI/UX Enhancement	ปรับหน้าเว็บให้สวยและใช้ง่าย, mobile responsive	Medium
-Testing	Unit + Integration + E2E	High
-Deployment	ส่งมอบระบบบน server / cloud	High
-🔹 Workflow / Prioritization
+---
 
-High Priority (ต้องทำก่อน)
-
-Real Smart Notifications
-
-Recurring Meetings
-
-Deployment / Delivery
-
-Medium Priority (หลังจาก High เสร็จ)
-
-Team Calendar View
-
-Advanced Filtering
-
-Delegation & Permissions
-
-Usage Analytics
-
-UI/UX Enhancements
-
-Testing & Integration
-
-ทุก feature ใหม่ต้องมี test coverage
-
-ตรวจสอบทั้ง backend + frontend
-
-🔹 เป้าหมาย Spin 3
-
-ระบบ สมบูรณ์แบบ สำหรับใช้งานจริง
-
-รองรับ ผู้ใช้หลายคน / ทีม
-
-ลดปัญหา No-show / Booking conflict
-
-เต็มรูปแบบทั้ง MVP + Advanced Features
+## Tech Stack
+- Backend: Node.js + Express + SQLite3  
+- Frontend: HTML + CSS + JS (Bootstrap)  
+- Notifications: Mock / Real push & email (Spin3)  
+- Version Control: Git + GitHub
