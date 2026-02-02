@@ -29,11 +29,11 @@
 |---------|-------------|--------|
 | Recurring Meetings | จองประชุมซ้ำรายสัปดาห์/รายเดือน | ⬜ Planned |
 | Team Calendar View | ดูตารางห้องรวมทีม | ⬜ Planned |
-| Advanced Filtering | Filter ตาม capacity, equipment, location | ⬜ Planned |
+| Advanced Filtering & Search | Filter ตาม capacity, equipment, status และค้นหาชื่อห้อง | ✅ Implemented (Spin3) |
 | Delegation & Permissions | มอบสิทธิ์การจองให้คนอื่น / admin | ⬜ Planned |
 | Usage Analytics | ดูสถิติการใช้งานห้อง, no-show rate | ⬜ Planned |
 | Smart Notifications – Real | ส่ง push / desktop / email จริง | ⬜ Planned |
-| UI/UX Enhancement | ปรับหน้าเว็บให้สวย, mobile-friendly | ⬜ Planned |
+| UI/UX Enhancement | ปรับหน้าเว็บให้สวย, mobile-friendly, interactive particle background | ✅ Implemented (Spin3) |
 | Testing & Deployment | Unit, Integration, E2E + Deploy server/cloud | ⬜ Planned |
 
 ---
@@ -46,16 +46,46 @@
 
 ---
 
-## Usage
-1. เปิดหน้า frontend (`index.html`) หรือรันผ่าน server  
-2. เลือกห้อง, เวลา, ใส่หัวข้อประชุม  
-3. กด **Book** → ระบบจะแจ้งเตือนและบันทึกลงฐานข้อมูล  
-4. ตรวจสอบการจองของคุณที่หน้า **My Bookings**
+## Usage (Spin3)
+1. เปิด terminal → cd ไปที่ backend folder:
 
----
+```bash
+cd /mnt/c/WINDOWS/system32/meeting-room-booking/backend
+ติดตั้ง dependencies (ครั้งแรก):
 
-## Tech Stack
-- Backend: Node.js + Express + SQLite3  
-- Frontend: HTML + CSS + JS (Bootstrap)  
-- Notifications: Mock / Real push & email (Spin3)  
-- Version Control: Git + GitHub
+npm install
+รัน Node.js server:
+
+node app.js
+เปิด browser → ไปที่:
+
+http://localhost:3000
+ใช้งานระบบ:
+
+ค้นหาห้อง, กรองตามสถานะ / capacity / equipment
+
+เลือกห้อง, เวลา, ใส่หัวข้อประชุม
+
+กด Book → ระบบแจ้งเตือน, highlight ห้องที่ถูกจอง
+
+ยกเลิกการจองผ่าน modal confirm
+
+หน้าเว็บ interactive + pagination + sorting
+
+Tech Stack
+Backend: Node.js + Express + SQLite3
+
+Frontend: HTML + CSS + JS (Vanilla, interactive particle background)
+
+Notifications: Mock notifications (Spin3)
+
+Version Control: Git + GitHub
+
+Notes
+SQLite database อยู่ใน database.db
+
+Frontend อยู่ใน frontend/
+
+สามารถปรับจำนวนห้องประชุมใน app.js → seed data
+
+สำหรับ production แนะนำใช้ Cloud VPS หรือ Render/ Railway
