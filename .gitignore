@@ -1,0 +1,7 @@
+# Ignore local database files
+/backend/database.db
+/database.db
+
+# Node modules and logs (common ignores)
+node_modules/
+npm-debug.log
