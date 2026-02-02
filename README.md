@@ -50,10 +50,10 @@
 1. เปิด terminal → cd ไปที่ backend folder:
 
 ```bash
-cd /mnt/c/WINDOWS/system32/meeting-room-booking/backend
+cd /mnt/c/WINDOWS/system32/meeting-room-booking
 ติดตั้ง dependencies (ครั้งแรก):
 
-npm install
+node app.js
 รัน Node.js server:
 
 node app.js
